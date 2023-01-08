@@ -1,14 +1,26 @@
 {
-  "name": "lib",
+  "name": "team-profile-generator",
   "version": "1.0.0",
   "description": "",
-  "main": "Employee.js",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naidiri1/Team-Profile-Generator-.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naidiri1/Team-Profile-Generator-/issues"
+  },
+  "homepage": "https://github.com/Naidiri1/Team-Profile-Generator-#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "jest": "^24.8.0"
   }
 }

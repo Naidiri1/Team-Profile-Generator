@@ -1,0 +1,29 @@
+header{
+    text-align: center;
+    background-color: bisque;
+    
+}
+
+body{
+    font-size: larger;
+}
+.card{
+    background-color: rgb(84, 148, 148);
+    display:inline-block;
+    text-align:justify;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+p{
+    text-align: center;
+}
+.information{
+    border: 1px black solid;
+ padding: 6px;
+}
+li{
+ list-style: none;
+}

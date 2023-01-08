@@ -10,19 +10,24 @@ function generateMarkdown(data) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Team</title>
+        <link rel="stylesheet" href="./dist/style.css" />
     </head>
     <body>
     <header>
     <h1> My Team </h1>
     </header>
+
 <div class="container">
  <div class="card">
   <p>${data.managerName}</p>
    <div class="information">
    <ul>
-     <li><p>${data.managerId}</p></li>
-     <li><a href="mailto:${data.managerEmail}">${data.managerEmail}</a></li>
-     <li>${data.officeNumber}</li>
+     <li>ID: ${data.managerId}</li>
+     <li>
+     Email:
+     <a href="mailto:${data.managerEmail}"> ${data.managerEmail}</a>
+     </li>
+     <li>Office Number: ${data.officeNumber}</li>
    </ul>
  </div>
  </div>

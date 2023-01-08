@@ -23,6 +23,14 @@ This project is for everyone who is interested in using an app based on the comm
 
 The main reason of this app is to guide the user with specific questions to generate a webpage, the user will have to open the command line and open the `index.js` using `node index.js` and there will be questions to guide the user: What is your manager's name?, What is your Manager's id?, What is your Manager's email?, What is your Manager's office number?, and also Id, Email,GitHub username for the engineers and also questions for an intern's school name. Once the user answer alll the questions related to the team the webpage will be generated with an organized and being able to acces to their information based on the user input.
 
+![screenshot of the app in the command line](.)
+![sample of webpage]()
+
+- [Video of the app generating a webpage](https:)
+
+- [sample of webpage index.html](.)
+
+
 ## Credits 
 
 N/A

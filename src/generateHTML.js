@@ -21,11 +21,11 @@ function htmlCards(employeesArr){
        </li>
        <li>Office Number: ${employeesArr[index].getOfficeNumber()}</li>
        </ul>
-       <div/>
+       </div>
        </div>
         `;
         cardHtml.push(managerCard)
-    }else if  (employeesArr[index].getRole() === 'Intern' ){
+    }else if  (employeesArr[index].getRole() === 'Intern') {
      // CREATE INTERN HTML
      const internCard = `
      <div classcard>
@@ -42,9 +42,7 @@ function htmlCards(employeesArr){
      </ul>
       `;
       cardHtml.push(internCard)
-    }else{
-    employeesArr[index].getRole() === 'Engineer'
-
+    }else if (employeesArr[index].getRole() === 'Engineer'){
       const engineerCard = `
       <div= card>
       <div class="topSection">
@@ -66,11 +64,13 @@ function htmlCards(employeesArr){
 
     }
     // return the cardHtml array which contains all of the employee cards and converts it into a string
-    return cardHtml.join("")
+    return cardHtml.join("");
 }}
-function generateHTML(data) {
-    return `
 
+function generateHTML(response) {
+ 
+  return `
+  
     <!DOCTYPE html>
     <html lang="en">
     
@@ -87,13 +87,14 @@ function generateHTML(data) {
     </header>
 
 <div class="container">
-${htmlCards(data)}
+${htmlCards(response)}
 
  </body>
 </html>
   
 `;
 }
+
 //  exported values and functions from that module. 
 module.exports = generateHTML;
 

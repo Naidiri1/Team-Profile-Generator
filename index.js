@@ -143,8 +143,8 @@ function engineerPrompt() {
        })
 }
 
-function writeFile(data) {
-    fs.writeFile(`index.html`, generateHTML(data),(err) =>
+function writeFile(response) {
+    fs.writeFile(`index.html`, generateHTML(response),(err) =>
     err ? console.log(err) : console.log('Successfully created html!')
     )
     console.log(employeesArr);

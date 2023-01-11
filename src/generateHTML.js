@@ -1,8 +1,9 @@
 const Employee = require("../lib/Employee");
-cardHtml = [];
+
 
 // you want to make a function that loops through your employeeArr to make html cards for all employees
 function htmlCards(employeesArr){
+  let cardHtml = '';
   for (let index = 0; index < employeesArr.length; index++) {
     // employeesArr[index] returns an employee. all employees have a role
     if (employeesArr[index].getRole() === 'Manager' ) {
@@ -24,11 +25,11 @@ function htmlCards(employeesArr){
        </div>
        </div>
         `;
-        cardHtml.push(managerCard)
+        cardHtml+=managerCard;
     }else if  (employeesArr[index].getRole() === 'Intern') {
      // CREATE INTERN HTML
      const internCard = `
-     <div classcard>
+     <div class= "card">
      <div class="topSection">
      <p>${employeesArr[index].getName()}</p>
      <p>${employeesArr[index].getRole()}</p>
@@ -41,10 +42,10 @@ function htmlCards(employeesArr){
      <li>Office Number: ${employeesArr[index].getSchool()}</li>
      </ul>
       `;
-      cardHtml.push(internCard)
+      cardHtml+=internCard;
     }else if (employeesArr[index].getRole() === 'Engineer'){
       const engineerCard = `
-      <div= card>
+      <div class="card">
       <div class="topSection">
       <p>${employeesArr[index].getName()}</p>
       <p>${employeesArr[index].getRole()}</p>
@@ -59,13 +60,12 @@ function htmlCards(employeesArr){
       </li>
       </ul>
        `;
-       cardHtml.push(engineerCard)
-
-
+       cardHtml+=engineerCard
     }
     // return the cardHtml array which contains all of the employee cards and converts it into a string
-    return cardHtml.join("");
-}}
+  }
+  return cardHtml
+}
 
 function generateHTML(response) {
  

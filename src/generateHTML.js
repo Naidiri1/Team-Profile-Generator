@@ -1,7 +1,7 @@
 const Employee = require("../lib/Employee");
 
 
-// you want to make a function that loops through your employeeArr to make html cards for all employees
+// function that loops through your employeeArr to make html cards for all employees
 function htmlCards(employeesArr){
   let cardHtml = '';
   for (let index = 0; index < employeesArr.length; index++) {
@@ -9,64 +9,72 @@ function htmlCards(employeesArr){
     if (employeesArr[index].getRole() === 'Manager' ) {
       // CREATE MANAGER HTML
       const managerCard = `
-       <div class="card">
-       <div class="topSection">
-       <p>${employeesArr[index].getName()}</p>
-       <p>${employeesArr[index].getRole()}</p>
-       </div>
-       <div class="information">
-       <ul>
-       <li>ID: ${employeesArr[index].getId()}</li>
-       <li>Email:
-       <a href="mailto:${employeesArr[index].getEmail()}">${employeesArr[index].getEmail()}</a>
-       </li>
-       <li>Office Number: ${employeesArr[index].getOfficeNumber()}</li>
-       </ul>
-       </div>
-       </div>
+      <div class="card">
+          <div class="topSection">
+            <p>${employeesArr[index].getName()}</p>
+            <p>${employeesArr[index].getRole()}</p>
+           </div>
+         <div class="information">
+          <ul>
+            <li>ID: ${employeesArr[index].getId()}</li>
+            <li>Email:
+            <a href="mailto:${employeesArr[index].getEmail()}">${employeesArr[index].getEmail()}</a>
+            </li>
+            <li>Office Number: ${employeesArr[index].getOfficeNumber()}</li>
+           </ul>
+          </div>
+      </div>
         `;
         cardHtml+=managerCard;
     }else if  (employeesArr[index].getRole() === 'Intern') {
      // CREATE INTERN HTML
      const internCard = `
      <div class= "card">
-     <div class="topSection">
-     <p>${employeesArr[index].getName()}</p>
-     <p>${employeesArr[index].getRole()}</p>
-     <div class="information">
-     <ul>
-     <li>ID: ${employeesArr[index].getId()}</li>
-     <li>Email:
-     <a href="mailto:${employeesArr[index].getEmail()}">${employeesArr[index].getEmail()}</a>
-     </li>
-     <li>Office Number: ${employeesArr[index].getSchool()}</li>
-     </ul>
+       <div class="topSection">
+         <p>${employeesArr[index].getName()}</p>
+         <p>${employeesArr[index].getRole()}</p>
+       </div>
+       <div class="information">
+        <ul>
+           <li>ID: ${employeesArr[index].getId()}</li>
+           <li>Email:
+           <a href="mailto:${employeesArr[index].getEmail()}">${employeesArr[index].getEmail()}</a>
+           </li>
+           <li>School: ${employeesArr[index].getSchool()}</li>
+        </ul>
+        </div>
+     </div>
       `;
       cardHtml+=internCard;
+       // CREATE ENGINEER HTML
     }else if (employeesArr[index].getRole() === 'Engineer'){
       const engineerCard = `
       <div class="card">
-      <div class="topSection">
-      <p>${employeesArr[index].getName()}</p>
-      <p>${employeesArr[index].getRole()}</p>
-      <div class="information">
-      <ul>
-      <li>ID: ${employeesArr[index].getId()}</li>
-      <li>Email:
-      <a href="mailto:${employeesArr[index].getEmail()}">${employeesArr[index].getEmail()}</a>
-      </li>
-      <li>Office Number: 
-      <a href="https://github.com/${employeesArr[index].getGithub()}">${employeesArr[index].getGithub()}</a>
-      </li>
-      </ul>
+         <div class="topSection">
+           <p>${employeesArr[index].getName()}</p>
+           <p>${employeesArr[index].getRole()}</p>
+          </div>
+        <div class="information">
+            <ul>
+           <li>ID: ${employeesArr[index].getId()}</li>
+           <li>Email:
+           <a href="mailto:${employeesArr[index].getEmail()}">${employeesArr[index].getEmail()}</a>
+           </li>
+           <li>GitHub: 
+          <a href="https://github.com/${employeesArr[index].getGithub()}">${employeesArr[index].getGithub()}</a>
+           </li>
+           </ul>
+         </div>
+       </div>
        `;
        cardHtml+=engineerCard
     }
-    // return the cardHtml array which contains all of the employee cards and converts it into a string
+   
   }
+   // return the cardHtml array which contains all of the employee cards and converts it into a string
   return cardHtml
 }
-
+// FUNCTION TO GENERATE THE HTML file and adding the cards with the function 
 function generateHTML(response) {
  
   return `
@@ -88,7 +96,7 @@ function generateHTML(response) {
 
 <div class="container">
 ${htmlCards(response)}
-
+</div>
  </body>
 </html>
   

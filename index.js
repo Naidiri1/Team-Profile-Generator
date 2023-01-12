@@ -1,4 +1,4 @@
-
+// getting the employees files 
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateHTML = require('./src/generateHTML');
@@ -6,9 +6,11 @@ const Manager = require("./lib/Manager");
 // require your Intern and Engineer class
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+
+// this variable contains all the response from the employees
 var employeesArr = [];
 
-
+// this is the prompt of questions  for manager
 const manager = [
 
     {
@@ -32,7 +34,7 @@ const manager = [
         message: "What is your office number?",
     },
 ]
-
+//this is the prompt of questions  for intern
 const intern =[
     {
     type: 'input',
@@ -56,7 +58,7 @@ const intern =[
 },
 
 ]
-
+//  once the manager add his information the questions will show to choose a team member or to finize building the selected ones 
 const options =  [ {
     type: 'list',
     name: 'teamMembers',
@@ -110,7 +112,7 @@ function managerPrompt() {
         })
 }
 
-
+// this functions gives the questions for the engineer if the selections is to add him to the team 
 function engineerPrompt() {
     inquirer.prompt([
         {
@@ -143,6 +145,7 @@ function engineerPrompt() {
        })
 }
 
+// function to make the file html adding the response to the cards collected.
 function writeFile(response) {
     fs.writeFile(`index.html`, generateHTML(response),(err) =>
     err ? console.log(err) : console.log('Successfully created html!')
@@ -150,7 +153,7 @@ function writeFile(response) {
     console.log(employeesArr);
 };
 
-
+// function to initiate the app with the manager questios
  function init (){
     managerPrompt();
  }

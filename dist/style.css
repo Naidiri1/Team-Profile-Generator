@@ -1,33 +1,52 @@
 header{
     text-align: center;
-    background-color: bisque;
+    background-color: rgb(230, 74, 35);
     
 }
 
 body{
     font-size: larger;
+    font: 1.5em sans-serif;
+    background-color: black;
 }
 .card{
-    background-color: rgb(84, 148, 148);
-    display:inline-block;
+    background-color: rgb(119, 124, 124);
     text-align:justify;
+   margin-bottom:100px;
+  
+   
 }
 .topSection>p{
-    background-color: rgb(76, 120, 179);
+    background-color: rgb(216, 139, 76);
   margin-top: 0%;
   margin-bottom: 0%;
+font-weight: bolder;
 }
 a{
     text-decoration: none;
-    color: black;
+    color: rgb(59, 81, 155);
+    font-weight: bolder;
 }
 p{
     text-align: center;
 }
 .information{
     border: 1px black solid;
- padding: 6px;
+
+padding:10px 10px 10px ;
+ 
 }
 li{
  list-style: none;
+ border: 1px black solid;
+ 
+}
+.container{
+  justify-content: space-evenly;
+    margin:10px;
+    display:flex;
+}
+ul{
+    padding:10px 15px;
+    background-color: aliceblue;
 }

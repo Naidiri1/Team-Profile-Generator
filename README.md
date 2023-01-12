@@ -30,7 +30,7 @@ The main reason of this app is to guide the user with specific questions to gene
 - Video link of the app html [Video of the app generating a webpage](https://app.castify.com/view/a3ed5bac-eec0-4c98-a60c-f54e1e9efaaa)
 
 - Sample of the team profile generator [sample of webpage index.html](./index.html)
-
+-Sample of the team profile generator [webpage](http://127.0.0.1:5500/index.html)
 
 ## Credits 
 

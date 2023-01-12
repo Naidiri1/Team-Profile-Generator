@@ -23,12 +23,13 @@ This project is for everyone who is interested in using an app based on the comm
 
 The main reason of this app is to guide the user with specific questions to generate a webpage, the user will have to open the command line and open the `index.js` using `node index.js` and there will be questions to guide the user: What is your manager's name?, What is your Manager's id?, What is your Manager's email?, What is your Manager's office number?, and also Id, Email,GitHub username for the engineers and also questions for an intern's school name. Once the user answer alll the questions related to the team the webpage will be generated with an organized and being able to acces to their information based on the user input.
 
-![screenshot of the app in the command line](.)
-![sample of webpage]()
+- screenshot of the html ![screenshot of the html](./imgs%20for%20readme/html%20.jpg)
+- sample of webpage ![Sample of webpage](./imgs%20for%20readme/screenshot.jpg)
+- sample of the command line ![sample of the command line](./imgs%20for%20readme/command-line.jpg)
 
-- [Video of the app generating a webpage](https:)
+- Video link of the app html [Video of the app generating a webpage](https://app.castify.com/view/a3ed5bac-eec0-4c98-a60c-f54e1e9efaaa)
 
-- [sample of webpage index.html](.)
+- Sample of the team profile generator [sample of webpage index.html](./index.html)
 
 
 ## Credits 
